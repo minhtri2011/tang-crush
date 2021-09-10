@@ -47,6 +47,7 @@ function firstQuestion() {
     document.getElementById('autoplay').play();
   });
 }
+window.swr
 
 // switch button position
 function switchButton() {

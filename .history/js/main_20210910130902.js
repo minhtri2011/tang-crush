@@ -44,7 +44,6 @@ function firstQuestion() {
     confirmButtonText: CONFIG.btnIntro,
   }).then(function () {
     $('.content').show(200);
-    document.getElementById('autoplay').play();
   });
 }
 

@@ -47,6 +47,9 @@ function firstQuestion() {
     document.getElementById('autoplay').play();
   });
 }
+window.setTimeout(() => {
+    
+}, timeout);
 
 // switch button position
 function switchButton() {

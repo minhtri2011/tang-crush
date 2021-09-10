@@ -20,8 +20,8 @@ $(document).ready(function () {
       $('body').delay(350).css({
           overflow: 'visible',
         });
-    }, 600);
-    
+        document.getElementById('autoplay').play();
+  }, 600);
 });
 
 function init() {
@@ -44,7 +44,6 @@ function firstQuestion() {
     confirmButtonText: CONFIG.btnIntro,
   }).then(function () {
     $('.content').show(200);
-    document.getElementById('autoplay').play();
   });
 }
 

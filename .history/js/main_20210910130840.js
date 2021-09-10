@@ -21,7 +21,7 @@ $(document).ready(function () {
           overflow: 'visible',
         });
     }, 600);
-    
+    document.getElementById('autoplay').play();
 });
 
 function init() {
@@ -44,7 +44,6 @@ function firstQuestion() {
     confirmButtonText: CONFIG.btnIntro,
   }).then(function () {
     $('.content').show(200);
-    document.getElementById('autoplay').play();
   });
 }
 

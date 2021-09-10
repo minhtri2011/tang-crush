@@ -1,27 +1,31 @@
-// window.setTimeout(() => {
-// }, 400);
-//     window.addEventListener('load', (event) => {
-//         var audio = new Audio('sound/sound.mp3');
-//         audio.play();
-//     console.log(audio);
-//     console.log('pal');
+// window.addEventListener('load', (event) => {
+//   window.setTimeout(() => {
+// }, 500);
 // });
 // window.onload = function () {
-// //   document.getElementById('autoplay').play();
+//   console.log('pal');
+//   document.getElementById('autoplay').play();
 // };
+
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isChrome){
+      $('#iframeAudio').remove()
+  }
+  else {
+      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+  }
 
 
 $(document).ready(function () {
   // process bar
   setTimeout(function () {
-      firstQuestion();
-      $('.spinner').fadeOut();
-      $('#preloader').delay(350).fadeOut('slow');
-      $('body').delay(350).css({
-          overflow: 'visible',
-        });
-    }, 600);
-    
+    firstQuestion();
+    $('.spinner').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({
+      overflow: 'visible',
+    });
+  }, 600);
 });
 
 function init() {
@@ -44,7 +48,6 @@ function firstQuestion() {
     confirmButtonText: CONFIG.btnIntro,
   }).then(function () {
     $('.content').show(200);
-    document.getElementById('autoplay').play();
   });
 }
 
@@ -73,6 +76,8 @@ function moveButton() {
   $('#no').css('top', top);
 }
 init();
+
+
 
 var n = 0;
 $('#no').mousemove(function () {

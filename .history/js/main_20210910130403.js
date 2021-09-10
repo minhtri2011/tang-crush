@@ -1,5 +1,5 @@
 // window.setTimeout(() => {
-// }, 400);
+    // }, 400);
 //     window.addEventListener('load', (event) => {
 //         var audio = new Audio('sound/sound.mp3');
 //         audio.play();
@@ -10,18 +10,30 @@
 // //   document.getElementById('autoplay').play();
 // };
 
+// window.onload = function () {
+//   console.log('adasd');
+//   setTimeout(() => {
+//       document.getElementById('autoplay').play();
+//     //   $('#autoplay').play();
+      
+//   }, 2000);
+// };
+function play() {
+    var audio = new Audio
+    audio.play();
+  }
+  play()
 
 $(document).ready(function () {
   // process bar
   setTimeout(function () {
-      firstQuestion();
-      $('.spinner').fadeOut();
-      $('#preloader').delay(350).fadeOut('slow');
-      $('body').delay(350).css({
-          overflow: 'visible',
-        });
-    }, 600);
-    
+    firstQuestion();
+    $('.spinner').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({
+      overflow: 'visible',
+    });
+  }, 600);
 });
 
 function init() {
@@ -44,7 +56,6 @@ function firstQuestion() {
     confirmButtonText: CONFIG.btnIntro,
   }).then(function () {
     $('.content').show(200);
-    document.getElementById('autoplay').play();
   });
 }
 
